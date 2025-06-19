@@ -1,0 +1,58 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url("AddUserbkg.png");
+    background-repeat: no-repeat;
+    background-size:cover;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: auto;
+ 
+}
+
+.details {
+    grid-area: 2/2/5/6;
+    background-color: white;
+    border-radius: 10px;
+    padding: 40px;
+    border:3px dotted orangered;
+    width: 500px;
+    overflow-y: scroll;
+    height: 300px;
+}
+.details div {
+    margin-bottom: 10px;
+}
+.details span {
+    font-weight: bold;
+    
+}
+
+#header{
+    grid-area: 1/2/2/6;
+    text-align: center;
+}
+.status-approved {
+    color: green;
+}
+
+.status-rejected {
+    color: red;
+}
+p{
+    font-size: 20px;
+    font-style: italic;
+}
+@media only screen and (max-width: 600px){
+    .details {
+       max-width: 400px;
+    }
+}
+

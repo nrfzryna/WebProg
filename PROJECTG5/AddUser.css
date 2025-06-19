@@ -1,0 +1,111 @@
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url("AddUserbkg.png");
+    background-repeat: no-repeat;
+    background-size:cover;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(6,1fr); 
+    grid-template-rows: auto;
+}
+
+#Forms {
+    grid-area: 2/1/5/8;
+    background-color:white;
+    text-align: center;
+    border-radius: 10px;
+    height: 500px;
+    width: 500px;
+    padding-bottom: 40px;
+    padding: 20px 0px;
+
+}
+#Forms p {
+    font-size: 0.8em; 
+    text-align: left;
+    font-style: italic;
+    color: #4d4d4d;
+    padding-left: 147px;
+}
+#Forms form{
+    text-align:center;
+    
+}
+#Forms input[type="submit"]:hover {
+    background-color: #4c74af; 
+    color: white; 
+}
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="date"],
+input[type="submit"] {
+    width: 55%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 12px;
+}
+#name{
+   margin-left: 25px;
+}
+#email{
+    margin-left: 28px;
+ }
+#phoneno{
+    margin-left:3px;
+}
+#dob{
+    margin-left: 12px;
+}
+#password{
+    margin-left:5px;
+}
+
+input[type="submit"] {
+    background-color: #007bff; 
+    color: #fff; 
+
+}
+#Forms input[type="submit"]:hover {
+    background-color: #828388; 
+    color: white; 
+}
+
+select {
+    width: 20%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 13px;
+}
+@media only screen and (max-width: 600px) {
+    #Forms{
+       width: 400px;
+       height:400px;
+    }
+    #Forms p{
+        padding-right: 50px;
+        padding-left: 120px;
+    }
+    body{
+        font-size: 10px;
+    }
+
+}
+
+
+
+
+
+

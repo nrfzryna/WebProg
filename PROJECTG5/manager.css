@@ -1,0 +1,231 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(202, 202, 202);
+}
+.grid-container {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(10, 1fr);
+}
+#header {
+    grid-area: 1 / 1 / 2 / 2;
+    background-color: rgb(38, 38, 48);
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 15px;
+    width: 150px;
+}
+#header a img {
+    padding-top: 20px;
+    padding-left: 10px;
+    max-width: 30%;
+}
+#header a {
+    text-decoration: none;
+    color: white;
+}
+#header a:hover {
+    color: black;
+}
+#header hr {
+    width: 110px;
+}
+#header2 {
+    grid-area: 1 / 2 / 2 / 3;
+    background-color: white;
+    padding: 10px;
+    font-size: 18px;
+}
+#header2 img {
+    padding-bottom: 10px;
+}
+#header3 {
+    grid-area: 1 / 3 / 2 / 11;
+    background-color: white;
+    padding: 50px 10px;
+    font-size: 45px;
+}
+#header3 b {
+    font-style: italic;
+    color: rgb(38, 38, 48);
+}
+#sidebar {
+    grid-area: 2 / 1 / 20 / 2;
+    background-color: rgb(38, 38, 48);
+    padding: 40px 20px 30px 30px;
+    font-size: 15px;
+}
+#sidebar a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+#sidebar a:hover {
+    color: rgb(255, 153, 112);
+    cursor: pointer;
+}
+.date-cell {
+    max-width: 150px; 
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+.status-approved {
+    color: green;
+}
+.status-rejected {
+    color: red;
+}
+.status-pending {
+    color: blue;
+}
+#total-pending{
+    grid-area: 3/2/4/5;
+    margin-left: 20px;
+    background-image: url("AddUserbkg.png");
+    border-radius: 10px;
+    padding: 10px;
+   margin-top: 20px;
+}
+#total-approved{
+    grid-area: 3/5/4/8;
+    margin-left: 5px;
+    background-color: rgb(241, 136, 98);
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 20px;
+   
+}
+#total-rejected{
+    grid-area: 3/8/4/11;
+    margin-left: 5px;
+    background-color: rgb(172, 178, 184);
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 20px;
+    margin-right: 20px;
+   
+}
+#tablelist {
+    grid-area: 4/ 2 / 5 / 11;
+    background-color: white;
+    overflow: auto;
+    margin: 20px 5px;
+    margin-left:20px;
+    padding: 10px 30px;
+    border-radius: 10px;
+    text-align: left;
+    margin-bottom: 10px;
+}
+#tablelist a {
+    text-decoration: none;
+    color: black;
+}
+
+#tabletotal {
+    grid-area: 5/ 2 / 6 / 11; /* Adjust grid-area as per your layout */
+    background-color: white;
+    overflow: auto;
+    margin: 20px 5px;
+    padding: 10px 30px;
+    border-radius: 10px;
+    text-align: left;
+    margin-left:20px;
+    margin-top: 10px;
+}
+
+#tabletotal a {
+    text-decoration: none;
+    color: black;
+}
+
+#tabletotal button[type="button"] {
+    width: 15%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 12px;
+    background-color: #007bff;
+    color: #fff;
+}
+
+#tabletotal button:hover {
+    background-color: rgb(161, 143, 143);
+    color: #fff;
+    cursor: pointer;
+}
+
+#TotalLeave img {
+    float: right;
+    padding-left: 50px;
+    max-width: 20%;
+}
+.count-number {
+    font-size: 50px;
+    color: rgb(48, 43, 43);
+}
+table {
+    border-collapse: collapse;
+    width: 100%; 
+    padding: 10px;
+    margin-top: 30px;
+    border: 1px solid black;
+   
+}
+th, td {
+    text-align: left;
+    border: 1px solid black;
+    padding: 3px 10px;
+}
+button[type="button"] {
+    width: 15%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 12px;
+    margin-top: 20px;
+    background-color: #007bff; 
+    color: #fff; 
+}
+#tablelist button:hover {
+    background-color: rgb(161, 143, 143);
+    color: #fff; 
+    cursor: pointer;
+}
+@media only screen and (max-width: 600px) {
+    #header {
+        grid-area: 1 / 1 / 2 / 2;
+        max-width: 80%;
+    }
+    #header2 {
+        grid-area: 1 / 2 / 2 / 3;
+    }
+    #header3{
+        grid-area: 1/3/2/11;  
+    }
+    #tablelist {
+        grid-area: 6/ 2 / 7 / 11;
+        padding: 10px;
+        margin-left: 20px;
+    }
+    #total-pending{
+        grid-area: 3/2/4/11;
+      
+    }
+    #total-approved{
+        grid-area: 4/2/5/11;
+        margin-left: 20px;
+         
+    }
+    #total-rejected{
+        grid-area: 5/2/6/11;
+        margin-left: 20px;
+        margin-right: 0px;
+       
+    }
+    #tabletotal {
+        grid-area: 7/ 2 / 8 / 11;
+        margin-left: 20px;
+    }
+    
+}

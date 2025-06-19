@@ -1,0 +1,245 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(202, 202, 202);
+
+}
+.grid-container {
+    display: grid;
+    grid-template-rows:auto;
+    grid-template-columns: repeat(10,1fr);
+    
+}
+#header {
+    grid-area: 1/1/2/2;
+    background-color: rgb(38, 38, 48);
+    color: white;
+    padding-left:10px;
+    padding-right: 20px;
+    text-align:center;
+    font-size:15px;
+    padding-bottom: 10px;
+    width:150px;
+}
+#header a img{
+    padding-top: 20px;
+    padding-left: 10px;
+    max-width:30%;
+}
+#header a{
+    text-decoration: none;
+    color:white;
+}
+#header a:hover{
+    color: black;
+}
+#header hr{
+    width: 110px;
+    color: rgb(211, 208, 208);
+
+}
+#header2{
+    grid-area: 1/2/2/3;
+    background-color:white;
+    padding-top: 10px;
+    font-size: 18px;
+}
+
+#header2 img{
+    padding-bottom: 10px;
+}
+#header3{
+    grid-area: 1/3/2/11;
+    background-color: white;
+    padding-top: 50px;
+    padding-left: 10px;
+    font-size: 45px;
+
+}
+#header3 b{
+    font-style: italic;
+    color:  rgb(38, 38, 48);
+}
+
+#sidebar {
+    grid-area:2/1/6/2;
+    background-color: white;
+    padding-left:30px;
+    padding-right: 20px;
+    padding-top: 40px;
+    background-color: rgb(38, 38, 48);
+    font-size: 15px;
+
+}
+
+#sidebar a {
+    text-decoration: none;
+    color:rgb(255, 255, 255);
+}
+
+#sidebar a:hover {
+    color: rgb(255, 153, 112);
+    cursor:pointer;
+
+}
+#TotalAdmin{
+    grid-area: 2/9/3/11;
+    background-image: url("AddUserbkg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top:20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 0px 20px;
+    border-radius: 10px;
+    text-align: left;
+}
+#TotalManager{
+    grid-area: 3/9/4/11;
+    background-color: rgba(248, 101, 56, 0.678);
+    margin-top:20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 0px 20px;
+    border-radius: 10px;
+    text-align: left;
+}
+#TotalStaff{
+    grid-area: 4/9/5/11;
+    background-color: rgba(153, 147, 147, 0.678);
+    margin-top:20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 0px 20px;
+    border-radius: 10px;
+    text-align: left;
+}
+#TotalLeave{
+    grid-area: 2/2/3/9;
+    background-color:white;
+    margin-left: 10px;
+    margin-top:20px;
+    padding:10px 30px;
+    padding-bottom: 0px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    text-align: left;
+    
+
+}
+#tablelist{
+    grid-area: 3/2/4/9;
+    background-color: white;
+    overflow: auto;
+    transition: background-color 0.2s;
+    margin-left: 10px;
+    padding:10px 30px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    text-align: left;
+}
+#tablelist a {
+    text-decoration: none;
+    color: black;
+}
+#TotalLeave img{
+    float: right;
+    padding-left: 50px;
+    max-width: 20%;
+}
+.count-number{
+    font-size: 50px;
+    color: rgb(48, 43, 43);
+}
+table{
+    border-collapse: collapse;
+    width:100%; 
+    padding:10px;
+    margin-top: 30px;
+    border: 1px solid black;
+
+}
+th, td {
+    text-align: left;
+    border: 1px solid black;
+    padding:3px 10px;
+}
+.date-cell {
+    max-width: 150px; 
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+.status-approved {
+    color: green;
+}
+
+.status-rejected {
+    color: red;
+}
+.status-pending {
+    color: blue;
+}
+button[type="button"] {
+    width: 15%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 12px;
+    background-color: #007bff; 
+    color: #fff; 
+}
+#tablelist button:hover{
+    background-color: rgb(161, 143, 143);
+    color: #fff; 
+    cursor: pointer;
+}
+@media only screen and (max-width: 600px) {
+    #header{
+        grid-area: 1/1/2/2;
+        max-width: 100px;
+    }
+    #header2{
+        grid-area: 1/2/2/3;
+    }
+    #header3{
+        grid-area: 1/3/2/11;  
+    }
+    #sidebar{
+        max-width: 100px;
+    }
+    #TotalLeave img{
+        max-width: 100%;
+    }
+    #TotalAdmin{
+        grid-area: 5/2/6/11;
+       
+    }
+    #TotalManager{
+        grid-area: 6/2/7/11;
+      
+    }
+    #TotalStaff{
+        grid-area: 7/2/8/11;
+       
+    }
+    #TotalLeave{
+        grid-area: 2/2/3/11;
+       
+    }
+    #tablelist{
+        grid-area: 3/2/4/11;
+    }
+    #showme{
+        grid-area: 4/2/5/11; 
+        width:245.5%; 
+    }
+    button[type="button"] {
+        width: 25%;
+       
+    }
+    #sidebar {
+        grid-area:2/1/10/2;
+       
+    }
+}
+
