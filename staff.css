@@ -1,0 +1,157 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(202, 202, 202);
+
+}
+.grid-container {
+    display: grid;
+    grid-template-rows:auto;
+    grid-template-columns: repeat(10,1fr);
+    
+}
+#header {
+    grid-area: 1/1/2/2;
+    background-color: rgb(38, 38, 48);
+    color: white;
+    padding-left:10px;
+    padding-right: 20px;
+    text-align:center;
+    font-size:15px;
+    padding-bottom: 10px;
+    width:150px;
+}
+#header a img{
+    padding-top: 20px;
+    padding-left: 10px;
+    max-width:30%;
+}
+#header a{
+    text-decoration: none;
+    color:white;
+}
+#header a:hover{
+    color: black;
+}
+#header hr{
+    width: 110px;
+
+}
+#header2{
+    grid-area: 1/2/2/3;
+    background-color:white;
+    padding-top: 10px;
+    font-size: 18px;
+}
+
+#header2 img{
+    padding-bottom: 10px;
+}
+#header3{
+    grid-area: 1/3/2/11;
+    background-color: white;
+    padding-top: 50px;
+    padding-left: 10px;
+    font-size: 45px;
+
+}
+#header3 b{
+    font-style: italic;
+    color:  rgb(38, 38, 48);
+}
+
+#sidebar {
+    grid-area:2/1/20/2;
+    background-color: white;
+    padding-left:30px;
+    padding-right: 20px;
+    padding-top: 40px;
+    background-color: rgb(38, 38, 48);
+    font-size: 15px;
+
+}
+
+#sidebar a {
+    text-decoration: none;
+    color:rgb(255, 255, 255);
+}
+#tablelist {
+    grid-area: 4/ 2 / 5 / 11;
+    background-color: rgb(255, 153, 112);
+    overflow: auto;
+    margin: 10px 5px;
+    margin-left:20px;
+    padding: 10px 30px;
+    border-radius: 10px;
+    text-align: left;
+    margin-bottom: 10px;
+}
+#tablelist a {
+    text-decoration: none;
+    color: black;
+}
+table {
+    background-color:white;
+    border-collapse: collapse;
+    width: 100%; 
+    padding: 10px;
+    margin-top: 30px;
+    border: 1px solid black;
+    margin-bottom: 20px;
+}
+th, td {
+    text-align: left;
+    border: 1px solid black;
+    padding: 3px 10px;
+}
+button[type="button"] {
+    width: 15%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 12px;
+    background-color: #007bff; 
+    color: #fff; 
+}
+#tablelist button:hover {
+    background-color: rgb(161, 143, 143);
+    color: #fff; 
+    cursor: pointer;
+}
+
+#sidebar a:hover {
+    color: rgb(255, 153, 112);
+    cursor:pointer;
+
+}
+.date-cell {
+    max-width: 150px; 
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+.status-approved {
+    color: green;
+}
+.status-rejected {
+    color: red;
+}
+.status-pending {
+    color: blue;
+}
+
+
+@media only screen and (max-width: 600px) {
+    #header{
+        grid-area: 1/1/2/2;
+        max-width: 100px;
+    }
+    #header2{
+        grid-area: 1/2/2/3;
+    }
+    #header3{
+        grid-area: 1/3/2/11;  
+    }
+    #sidebar{
+        max-width: 100px;
+    }
+}

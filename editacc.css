@@ -1,0 +1,167 @@
+
+body {
+    background-image: url("AddUserbkg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 95vh;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: repeat(5,1fr);
+}
+#header{
+    grid-area: 1/2/2/5;
+    margin-top: 100px;
+    text-align: center;
+   
+}
+#header p{
+    margin-left:5px;
+    padding-top: 20px;
+    font-size: 15px;
+}
+#tablelist{
+    grid-area: 2/2/5/5;
+    text-align: center;
+    background-color: white;
+    border-radius: 5px;
+    overflow-y:scroll;
+    max-height: 300px;
+    width: 899px;
+}
+table{
+    border-collapse: collapse;
+    width:100%;
+    
+}
+th, td {
+    text-align: left;
+    padding: 20px;
+ 
+}
+.date-cell {
+    max-width: 150px; 
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+input[type="text"] {
+    width: 60%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+}
+button[type="button"],
+button[type="submit"]
+ {
+    width: 20%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 12px;
+    background-color: #007bff; 
+    color: #fff; 
+}
+#searchForm button[type="submit"]:hover {
+    background-color: #828388; 
+    color: white; 
+    cursor: pointer;
+  
+}
+#tablelist input[type="submit"] {
+    width:80%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 12px;
+    background-color: #007bff; 
+    color: #fff; 
+}
+
+#noSearchMessage {
+    cursor: pointer;
+    color: red;
+    
+}
+#noSearchMessage:hover {
+    color: rgb(3, 41, 255);
+}
+.userRow {
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+.userRow:hover {
+    background-color: #b3a5a5; /* Change the background color on hover */
+}
+#buttonContainer{
+    grid-area: 5/3/6/5;
+    margin-top: 30px;
+    margin-left: 80px;
+}
+#buttonContainer button{
+    width: 35%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #ffffff; 
+}
+#buttonContainer button:hover{
+    background-color: #b3a5a5; 
+    cursor: pointer;
+}
+.status-approved {
+    color: rgb(17, 173, 17);
+}
+
+.status-rejected {
+    color: red;
+}
+.status-pending {
+    color: blue;
+}
+
+
+@media only screen and (max-width: 800px) {
+    button[type="submit"] {
+        width: 20%;
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 13px;
+        background-color: #007bff; 
+        color: #fff; 
+    }
+    input[type="text"] {
+        width: 60%;
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 13px;
+    }
+    #buttonContainer button{
+        width: 50%;
+        
+   }
+   #buttonContainer{
+    grid-area: 7/3/8/5;
+    margin-left: 0px;
+   }
+   #tablelist{
+    overflow-x:scroll;
+    overflow-y: scroll;
+    max-height: 250px;
+    max-width: 450px;
+   }
+body{
+    height:97.5vh;
+}
+
+
+
+}
